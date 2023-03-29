@@ -14,7 +14,10 @@ from PIL import Image
 
 CHUNK_SIZE = 1024
 
-app = FastAPI()
+app = FastAPI(
+    title='Farmer Buddy API',
+    description='API for Farmer Buddy App',
+)
 
 class crop_recommend_input(BaseModel):
     N : int
